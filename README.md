@@ -1,10 +1,6 @@
-# Flexible neural representation for physics prediction
+# Flexible NN for physics prediction
 
 Codes for reproducing main results in paper "Flexible Neural Representation for Physics Prediction".
-
-## Prerequisites
-
-We have tested this repo under Ubuntu 16.04 with tensorflow version 1.9.0.
 
 ## Prepare data
 
@@ -39,9 +35,6 @@ Now if you want to run a qualitative test, you can go to folder `scripts`. And r
 ```
 sh test_physics_qual.sh --gpu your_gpu_number --dataset path_to_your_dataset --restore_path path_to_your_dataset/pretrained_model/checkpoint-384000
 ```
-
-By default, this will generate two pickle files named as `true_results_physics_pred_better_8.pkl` and `results_physics_pred_better_8.pkl` in your home directory.
-You can change saving directly by setting `SAVE_DIR` parameter. Please check examples of visualizing these results in `visualize` folder.
 
 Similarly for a quantitative test, you can just replace `test_physics_qual.sh` using `test_physics_quan.sh`. 
 Then you will see the metrics also reported in our paper as outputs of this command.
